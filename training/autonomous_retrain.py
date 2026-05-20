@@ -15,7 +15,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models.cnn_extractor import CNNFeatureExtractor
 from models.gnn_fusion import GNNFusion
 
-base_dir = "c:/Users/SUNNY/Desktop/Major Project/Adaptive Explainable AI System for Smart Crop Health Monitoring"
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 models_dir = os.path.join(base_dir, "models")
 data_dir = os.path.join(base_dir, "data")
 auto_verified_dir = os.path.join(data_dir, "auto_verified")

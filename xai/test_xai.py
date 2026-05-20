@@ -56,7 +56,7 @@ def test_gradcam(image_path, model_path, output_path="xai/sample_gradcam.jpg"):
     print(f"Grad-CAM visualization saved to {output_path}")
 
 if __name__ == "__main__":
-    base_dir = "c:/Users/SUNNY/Desktop/Major Project/Adaptive Explainable AI System for Smart Crop Health Monitoring"
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
     # Needs an image. Extract one from the training set
     img_dir = os.path.join(base_dir, "plant_disease_dataset", "New Plant Diseases Dataset(Augmented)", "New Plant Diseases Dataset(Augmented)", "train")

@@ -74,7 +74,7 @@ def build_graph_schema(df, features, target, out_dir="data"):
     print(f"Nodes: {node_mapping}")
     
 if __name__ == "__main__":
-    base_dir = "c:/Users/SUNNY/Desktop/Major Project/Adaptive Explainable AI System for Smart Crop Health Monitoring"
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     csv_file = os.path.join(base_dir, "Crop_recommendation.csv")
     data_dir = os.path.join(base_dir, "data")
     

@@ -28,7 +28,7 @@ class TestE2ESystem(unittest.TestCase):
 
     def test_full_pipeline_execution(self):
         """End-to-End Test: Load models from disk, process an image, format env, and predict."""
-        base_dir = "c:/Users/SUNNY/Desktop/Major Project/Adaptive Explainable AI System for Smart Crop Health Monitoring"
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         cnn_path = os.path.join(base_dir, "models", "cnn_feature_extractor.pth")
         gnn_path = os.path.join(base_dir, "models", "hybrid_gnn_fusion.pth")
         schema_path = os.path.join(base_dir, "data", "graph_schema.pkl")

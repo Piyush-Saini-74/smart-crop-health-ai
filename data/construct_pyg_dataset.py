@@ -79,7 +79,7 @@ class CropGraphDataset(InMemoryDataset):
         print("Graph Dataset processing complete!")
 
 if __name__ == "__main__":
-    base_dir = "c:/Users/SUNNY/Desktop/Major Project/Adaptive Explainable AI System for Smart Crop Health Monitoring"
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     data_dir = os.path.join(base_dir, "data")
     
     img_embeddings_path = os.path.join(data_dir, "image_embeddings.pt")

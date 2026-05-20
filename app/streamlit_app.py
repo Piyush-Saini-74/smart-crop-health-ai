@@ -18,7 +18,7 @@ from training.adaptive_learning import AdaptiveLearningSystem
 from app.farmer_explanation import FarmerExplanationEngine
 
 # Initialize paths
-base_dir = "c:/Users/SUNNY/Desktop/Major Project/Adaptive Explainable AI System for Smart Crop Health Monitoring"
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 models_dir = os.path.join(base_dir, "models")
 data_dir = os.path.join(base_dir, "data")
 cnn_path = os.path.join(models_dir, "cnn_feature_extractor.pth")

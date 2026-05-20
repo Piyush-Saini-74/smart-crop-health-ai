@@ -210,7 +210,7 @@ def train_gnn(dataset_path, save_path="models/hybrid_gnn_fusion.pth", epochs=50,
 if __name__ == "__main__":
     print("Starting Training Pipeline...")
     
-    base_dir = "c:/Users/SUNNY/Desktop/Major Project/Adaptive Explainable AI System for Smart Crop Health Monitoring"
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     img_data_dir = os.path.join(base_dir, "plant_disease_dataset", "New Plant Diseases Dataset(Augmented)", "New Plant Diseases Dataset(Augmented)")
     models_dir = os.path.join(base_dir, "models")
     data_dir = os.path.join(base_dir, "data")
