@@ -152,7 +152,10 @@ def fetch_environment_data(city_name):
                     val = layer.get("depths", [{}])[0].get("values", {}).get("mean")
                     if val is not None: n = min(150.0, val / 10.0)
         except:
-            pass # Fallback to defaults if SoilGrids is down
+            # Fallback to defaults if SoilGrids is down, using geographic hash
+            np.random.seed(int(abs(lat + lon) * 100))
+            ph = round(float(np.random.uniform(5.5, 8.5)), 1)
+            n = float(np.random.randint(20, 150))
 
         # Phosphorus and Potassium are not tracked by generic free global APIs. 
         # For a complete demo, derive a consistent regional value using the coordinate hash.
