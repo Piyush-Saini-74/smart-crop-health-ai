@@ -20,6 +20,6 @@ A Graph-based Multi-Modal approach to predicting crop diseases. This system comb
    ```
 
 ## 🤝 Acknowledgments & Credits
-This project was developed by **[Your Name]**.
+This project was developed by **Piyush Saini**.
 
-Special thanks and credits to my friend **[Friend's Name]** for their invaluable help and contributions to making this project a reality! Their support in [mention what they helped with, e.g., testing, dataset collection, UI design] was greatly appreciated.
+Special thanks and credits to my friend **Mohd Zaid Ansari** for their invaluable help and contributions to making this project a reality! Their support and assistance throughout the development process was greatly appreciated.
