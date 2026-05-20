@@ -5,6 +5,6 @@ torch-geometric
 pandas
 numpy
 Pillow
-opencv-python
+opencv-python-headless
 matplotlib
 scikit-learn
