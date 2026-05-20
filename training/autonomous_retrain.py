@@ -104,12 +104,22 @@ def autonomous_retrain(batch_trigger_size=10):
     optimizer = optim.Adam(gnn.parameters(), lr=0.001)
     criterion = nn.CrossEntropyLoss()
     
-    train_dir = os.path.join(base_dir, "plant_disease_dataset", "New Plant Diseases Dataset(Augmented)", "New Plant Diseases Dataset(Augmented)", "train")
-    if os.path.exists(train_dir):
-        class_names = sorted(os.listdir(train_dir))
-        class_names = [c.replace("___", " - ").replace("_", " ") for c in class_names]
-    else:
-        class_names = [f"Class_{i}" for i in range(38)] 
+    # Hardcoded class names since the original dataset directory is ignored in Git
+    class_names = [
+        "Apple - Apple scab", "Apple - Black rot", "Apple - Cedar apple rust", "Apple - healthy",
+        "Blueberry - healthy", "Cherry (including sour) - Powdery mildew", "Cherry (including sour) - healthy",
+        "Corn (maize) - Cercospora leaf spot Gray leaf spot", "Corn (maize) - Common rust ", 
+        "Corn (maize) - Northern Leaf Blight", "Corn (maize) - healthy", "Grape - Black rot",
+        "Grape - Esca (Black Measles)", "Grape - Leaf blight (Isariopsis Leaf Spot)", "Grape - healthy",
+        "Orange - Haunglongbing (Citrus greening)", "Peach - Bacterial spot", "Peach - healthy",
+        "Pepper, bell - Bacterial spot", "Pepper, bell - healthy", "Potato - Early blight",
+        "Potato - Late blight", "Potato - healthy", "Raspberry - healthy", "Soybean - healthy",
+        "Squash - Powdery mildew", "Strawberry - Leaf scorch", "Strawberry - healthy",
+        "Tomato - Bacterial spot", "Tomato - Early blight", "Tomato - Late blight",
+        "Tomato - Leaf Mold", "Tomato - Septoria leaf spot", "Tomato - Spider mites Two-spotted spider mite",
+        "Tomato - Target Spot", "Tomato - Tomato Yellow Leaf Curl Virus", "Tomato - Tomato mosaic virus",
+        "Tomato - healthy"
+    ] 
         
     # Data extraction loop for new samples
     pyg_data_list = []
