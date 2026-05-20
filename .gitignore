@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project Specific Data / Large files
+plant_disease_dataset/
+data/auto_verified/
+data/unverified/
+data/archived_verified/
+data/retraining_logs.csv
+data/processed/
+tests/mock_user_samples/
+tests/dummy_leaf.jpg
+Crop_recommendation.csv
+
+# Keep essential models but ignore potential temp weights
+# (cnn_feature_extractor.pth is ~94MB so it barely fits GitHub's 100MB limit. 
+# We WILL upload it, but we ignore any backup weights if they exist)
+*.bak
+*.tmp

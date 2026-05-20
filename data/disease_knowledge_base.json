@@ -1,0 +1,102 @@
+{
+    "General": {
+        "Reason_HI": [
+            "पौधे में फंगस या बैक्टीरिया का संक्रमण हो सकता है"
+        ],
+        "Reason_EN": [
+            "Plant might have fungal or bacterial infection"
+        ],
+        "Advice_HI": [
+            "कृषि विशेषज्ञ से संपर्क करें",
+            "संक्रमित पत्तियों को तुरंत हटा दें"
+        ],
+        "Advice_EN": [
+            "Contact agricultural expert",
+            "Remove infected leaves immediately"
+        ]
+    },
+    "Apple - Apple scab": {
+        "Reason_HI": [
+            "फंगस का हमला"
+        ],
+        "Reason_EN": [
+            "Fungal attack"
+        ],
+        "Advice_HI": [
+            "पत्तियों और फलों को सूखा रखें",
+            "फफूंदनाशक (Fungicide) का छिड़काव करें"
+        ],
+        "Advice_EN": [
+            "Keep leaves and fruits dry",
+            "Spray recommended fungicide"
+        ]
+    },
+    "Tomato - Early blight": {
+        "Reason_HI": [
+            "अल्टरनेरिया कवक (Alternaria Fungus) का संक्रमण"
+        ],
+        "Reason_EN": [
+            "Alternaria Fungus infection"
+        ],
+        "Advice_HI": [
+            "पौधों के बीच पर्याप्त दूरी रखें",
+            "तांबे (Copper) आधारित फफूंदनाशक का उपयोग करें"
+        ],
+        "Advice_EN": [
+            "Maintain adequate spacing between plants",
+            "Use copper-based fungicide"
+        ]
+    },
+    "Tomato - Late blight": {
+        "Reason_HI": [
+            "फाइटोफ्थोरा (Phytophthora) संक्रमण",
+            "अत्यधिक नमी और ठंडी रातें"
+        ],
+        "Reason_EN": [
+            "Phytophthora infection",
+            "Excessive moisture and cool nights"
+        ],
+        "Advice_HI": [
+            "पत्तियों पर पानी न पड़ने दें",
+            "खेत में पानी जमा न होने दें",
+            "तुरंत उपचार शुरू करें"
+        ],
+        "Advice_EN": [
+            "Avoid overhead watering",
+            "Ensure proper drainage",
+            "Start treatment immediately"
+        ]
+    },
+    "Potato - Early blight": {
+        "Reason_HI": [
+            "फंगस के कारण पत्तियों पर काले धब्बे"
+        ],
+        "Reason_EN": [
+            "Fungal infection causing dark spots"
+        ],
+        "Advice_HI": [
+            "सुबह या शाम को सिंचाई करें",
+            "रोगग्रस्त पौधों को उखाड़कर नष्ट करें"
+        ],
+        "Advice_EN": [
+            "Irrigate in morning or evening",
+            "Uproot and destroy diseased plants"
+        ]
+    },
+    "Corn (maize) - Common rust": {
+        "Reason_HI": [
+            "पत्तियों पर जंग (Rust) जैसे धब्बे लगना"
+        ],
+        "Reason_EN": [
+            "Rust-like spots on leaves"
+        ],
+        "Advice_HI": [
+            "प्रतिरोधी किस्मों के बीज का उपयोग करें",
+            "अधिक फंगस होने पर फफूंदनाशक डालें"
+        ],
+        "Advice_EN": [
+            "Use resistant seed varieties",
+            "Apply fungicide if severely infected"
+        ]
+    }
+}
