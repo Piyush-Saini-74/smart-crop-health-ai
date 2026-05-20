@@ -86,8 +86,20 @@ class FarmerExplanationEngine:
         Acts as the intelligent bridge linking the CNN+GNN numeric outputs to Farmer outputs.
         Produces explicit structured bilingual outputs avoiding jargon.
         """
-        # Fetch KB Data (or fallback to general)
-        kb_entry = self.knowledge_base.get(disease_name, self.knowledge_base.get("General", {}))
+        # Check if the plant is healthy
+        is_healthy = "healthy" in disease_name.lower()
+        
+        if is_healthy:
+            # Override KB with healthy specifics
+            kb_entry = {
+                "Reason_HI": ["पौधा बिल्कुल स्वस्थ दिख रहा है"],
+                "Reason_EN": ["The plant appears completely healthy"],
+                "Advice_HI": ["नियमित देखभाल जारी रखें"],
+                "Advice_EN": ["Continue regular maintenance"]
+            }
+        else:
+            # Fetch KB Data (or fallback to general)
+            kb_entry = self.knowledge_base.get(disease_name, self.knowledge_base.get("General", {}))
         
         # 1. Stress Score Interpretation
         if stress_score > 0.6:
@@ -118,8 +130,12 @@ class FarmerExplanationEngine:
         else:
             warning_hi = None
             warning_en = None
-            problem_hi = "पत्ते में बीमारी है: " + disease_name
-            problem_en = "Leaf is affected by: " + disease_name
+            if is_healthy:
+                problem_hi = "पौधा स्वस्थ है: " + disease_name
+                problem_en = "Plant is Healthy: " + disease_name
+            else:
+                problem_hi = "पत्ते में बीमारी है: " + disease_name
+                problem_en = "Leaf is affected by: " + disease_name
             
         # Eliminate duplicates
         final_reasons_hi = list(dict.fromkeys(final_reasons_hi))
